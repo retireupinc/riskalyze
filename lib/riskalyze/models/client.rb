@@ -12,8 +12,8 @@ module Riskalyze
       attribute :fname, String
       attribute :lname, String
       attribute :integrations, Array
-      attribute :latest_current_portfolio, Integer
-      attribute :latest_proposed_portfolio, Integer
+      attribute :latest_current_portfolio, Float
+      attribute :latest_proposed_portfolio, Float
       attribute :messages, Array
       attribute :next_review_date, DateTime
       attribute :phone, String
@@ -22,7 +22,7 @@ module Riskalyze
       attribute :prev_review_date, DateTime
       attribute :questionnaires, Array
       attribute :retirements, Array
-      attribute :risk_number, String
+      attribute :risk_number, Integer
       attribute :status, String
 
     end

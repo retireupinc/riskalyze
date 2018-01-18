@@ -8,7 +8,7 @@ module Riskalyze
       attribute :name, String
       attribute :total, Integer
       attribute :type, String
-      attribute :analysis, Hash
+      attribute :analysis, Analysis
       attribute :created, DateTime
       attribute :updated, DateTime
       attribute :allocations, Array[Allocation]

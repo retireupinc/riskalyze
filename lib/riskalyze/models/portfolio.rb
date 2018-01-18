@@ -8,7 +8,7 @@ module Riskalyze
       attribute :client_id, Integer
       attribute :name, String
       attribute :total, Integer
-      attribute :analysis, Hash
+      attribute :analysis, Analysis
       attribute :status, String
       attribute :type, String
       attribute :created, DateTime
