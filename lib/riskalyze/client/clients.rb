@@ -13,7 +13,7 @@ module Riskalyze
 
       def client(client_id)
         client = get "clients/#{client_id}"
-        Riskalyze::Models::Client.new response
+        Riskalyze::Models::Client.new client
       end
     end
   end
