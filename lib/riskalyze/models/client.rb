@@ -6,7 +6,7 @@ module Riskalyze
       attribute :id, Integer
       attribute :advisor_user_id, String
       attribute :client_user_id, String
-      attribute :attributes, Array
+      # attribute :client_attributes, Array
       attribute :created, DateTime
       attribute :email, String
       attribute :fname, String

@@ -1,6 +1,8 @@
 module Riskalyze
   class Client
     include Riskalyze::Connection
+    include Riskalyze::Authentication
+    include Riskalyze::Client::Portfolios
     include Riskalyze::Client::Clients
 
     def initialize(options =  {})

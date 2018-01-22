@@ -1,7 +1,6 @@
 module Riskalyze
-  module Client
-    module Portfolio
-
+  class Client
+    module Portfolios
       def portfolios
         portfolios = get 'portfolios'
         portfolios.map{ |portfolio_params| Riskalyze::Models::Portfolio.new portfolio_params }

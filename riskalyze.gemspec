@@ -26,4 +26,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'httparty', '~> 0.15.6'
   spec.add_dependency 'virtus', '~> 1.0.5'
+  spec.add_dependency 'oauth2', '~> 1.4'
 end

@@ -1,5 +1,5 @@
 module Riskalyze
-  module Client
+  class Client
     module Clients
       def search_clients(search_query, options = {})
         clients = get 'clients/search', {query: { q: search_query}}
