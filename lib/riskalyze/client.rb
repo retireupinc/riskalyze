@@ -10,6 +10,7 @@ module Riskalyze
 
       @api_endpoint = options[:api_endpoint] || Riskalyze.config.api_endpoint
       @oauth_token = options[:oauth_token]
+      @refresh_token = options[:refresh_token]
     end
   end
 end
