@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "riskalyze/version"
+require "riskalyze_ruby/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "riskalyze"
-  spec.version       = Riskalyze::VERSION
+  spec.name          = "riskalyze-ruby"
+  spec.version       = RiskalyzeRuby::VERSION
   spec.authors       = ["Evan Waters"]
   spec.email         = ["evan@retireup.com"]
 
   spec.summary       = %q{An API wrapper for the Riskalyze API}
-  spec.homepage      = "https://github.com/retireupinc/riskalyze"
+  spec.homepage      = "https://github.com/retireupinc/riskalyze-ruby"
 
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|

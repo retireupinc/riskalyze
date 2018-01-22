@@ -1,4 +1,4 @@
-module Riskalyze
+module RiskalyzeRuby
   module Connection
     def get(url, options = {})
       request :get, url, options

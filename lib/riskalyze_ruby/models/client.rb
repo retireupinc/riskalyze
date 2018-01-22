@@ -1,4 +1,4 @@
-module Riskalyze
+module RiskalyzeRuby
   module Models
     class Client
       include Virtus.model

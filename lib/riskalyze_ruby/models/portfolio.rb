@@ -1,17 +1,22 @@
-module Riskalyze
+module RiskalyzeRuby
   module Models
-    class Account
+    class Portfolio
       include Virtus.model
 
       attribute :id, Integer
-      attribute :porfolio_id, Integer
+      attribute :user_id, Integer
+      attribute :client_id, Integer
       attribute :name, String
       attribute :total, Integer
-      attribute :type, String
       attribute :analysis, Analysis
+      attribute :status, String
+      attribute :type, String
       attribute :created, DateTime
       attribute :updated, DateTime
-      attribute :allocations, Array[Allocation]
+      attribute :data_model, Integer
+      attribute :accounts, Array[Account]
+
+
     end
   end
 end

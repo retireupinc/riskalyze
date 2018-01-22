@@ -1,4 +1,4 @@
-module Riskalyze
+module RiskalyzeRuby
   class APIError < StandardError
   end
 
