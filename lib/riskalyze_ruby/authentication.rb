@@ -2,21 +2,21 @@ module RiskalyzeRuby
   module Authentication
     def refresh_access_token!
       raise ArgumentError, 'Refresh token required.' unless @refresh_token
-      client = OAuth2::Client.new(RiskalyzeRuby.config.client_id, RiskalyzeRuby.config.client_secret,
-        site: RiskalyzeRuby.config.api_endpoint,
-        token_url: RiskalyzeRuby.config.token_path
-      )
 
-      access_token = OAuth2::AccessToken.new(client, @oauth_token, {refresh_token: @refresh_token})
+      params = {
+        body: {
+          grant_type: 'refresh_token',
+          client_id: RiskalyzeRuby.config.client_id,
+          client_secret: RiskalyzeRuby.config.client_secret,
+          refresh_token: @refresh_token
+        }
+      }
 
-      token = access_token.refresh!
-
-      @oauth_token = token.token
-      @refresh_token = token.refresh_token
+      response = HTTParty.post("#{@api_endpoint}/#{RiskalyzeRuby.config.token_path}", params)
 
       {
-        oauth_token: token.token,
-        refresh_token: token.refresh_token
+        oauth_token: response['access_token'],
+        refresh_token: response['refresh_token']
       }
     end
   end
