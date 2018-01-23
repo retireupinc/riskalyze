@@ -11,8 +11,8 @@ module RiskalyzeRuby
       attribute :fname, String
       attribute :lname, String
       attribute :integrations, Array
-      attribute :latest_current_portfolio, Float
-      attribute :latest_proposed_portfolio, Float
+      attribute :latest_current_portfolio, Integer
+      attribute :latest_proposed_portfolio, Integer
       attribute :messages, Array
       attribute :next_review_date, DateTime
       attribute :phone, String
