@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "riskalyze_ruby/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "riskalyze-ruby"
+  spec.name          = "riskalyze_ruby"
   spec.version       = RiskalyzeRuby::VERSION
   spec.authors       = ["Evan Waters"]
   spec.email         = ["evan@retireup.com"]

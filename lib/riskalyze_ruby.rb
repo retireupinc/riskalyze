@@ -1,5 +1,4 @@
 require 'httparty'
-require 'oauth2'
 require 'virtus'
 
 require 'riskalyze_ruby/version'
