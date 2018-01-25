@@ -4,6 +4,9 @@ module RiskalyzeRuby
       raise ArgumentError, 'Refresh token required.' unless @refresh_token
 
       params = {
+        headers: {
+          'Accept' => 'application/json'
+        },
         body: {
           grant_type: 'refresh_token',
           client_id: RiskalyzeRuby.config.client_id,
@@ -12,11 +15,11 @@ module RiskalyzeRuby
         }
       }
 
-      response = HTTParty.post("#{@api_endpoint}/#{RiskalyzeRuby.config.token_path}", params)
+      response = handle_response(HTTParty.post("#{@api_endpoint}/#{RiskalyzeRuby.config.token_path}", params))
 
       {
-        oauth_token: response['access_token'],
-        refresh_token: response['refresh_token']
+        oauth_token: response[:access_token],
+        refresh_token: response[:refresh_token]
       }
     end
   end
