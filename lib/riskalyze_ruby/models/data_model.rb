@@ -1,0 +1,14 @@
+module RiskalyzeRuby
+  module Models
+    class DataModel
+      include Virtus.model
+
+      attribute :id, Integer
+      attribute :name, String
+      attribute :decription, String
+      attribute :market, Float
+      attribute :interest, Float
+      attribute :risk_number, Integer
+    end
+  end
+end
