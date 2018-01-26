@@ -1,8 +1,6 @@
 module RiskalyzeRuby
   module Models
-    class Analysis
-      include Virtus.model
-
+    class Analysis < Base
       attribute :return, Float
       attribute :stdev, Float
       attribute :risk_number, Integer

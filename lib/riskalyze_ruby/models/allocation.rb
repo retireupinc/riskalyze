@@ -1,8 +1,6 @@
 module RiskalyzeRuby
   module Models
-    class Allocation
-      include Virtus.model
-
+    class Allocation < Base
       attribute :id, Integer
       attribute :account_id, Integer
       attribute :portfolio_id, Integer

@@ -1,8 +1,6 @@
 module RiskalyzeRuby
   module Models
-    class Account
-      include Virtus.model
-
+    class Account < Base
       attribute :id, Integer
       attribute :porfolio_id, Integer
       attribute :asset_manager_id, Integer

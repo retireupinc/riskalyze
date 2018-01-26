@@ -1,8 +1,6 @@
 module RiskalyzeRuby
   module Models
-    class DataModel
-      include Virtus.model
-
+    class DataModel < Base
       attribute :id, Integer
       attribute :name, String
       attribute :decription, String

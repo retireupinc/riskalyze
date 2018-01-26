@@ -1,11 +1,9 @@
 module RiskalyzeRuby
   module Models
-    class Client
-      include Virtus.model
-
+    class Client < APIModel
       attribute :id, Integer
-      attribute :advisor_user_id, String
-      attribute :client_user_id, String
+      attribute :advisor_user_id, Integer
+      attribute :client_user_id, Integer
       attribute :created, DateTime
       attribute :email, String
       attribute :fname, String
@@ -35,6 +33,15 @@ module RiskalyzeRuby
       attribute :share_data, Hash
       attribute :permissions, Hash
       attribute :application_id, Integer
+
+      def current_portfolio
+        @client.portfolio(latest_current_portfolio)
+      end
+
+      def proposed_portfolio
+        @client.portfolio(latest_proposed_portfolio)
+      end
+
     end
   end
 end

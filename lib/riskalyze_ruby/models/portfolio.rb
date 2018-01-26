@@ -1,8 +1,6 @@
 module RiskalyzeRuby
   module Models
-    class Portfolio
-      include Virtus.model
-
+    class Portfolio < Base
       attribute :id, Integer
       attribute :user_id, Integer
       attribute :client_id, Integer
