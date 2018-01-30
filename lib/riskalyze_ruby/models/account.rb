@@ -2,7 +2,7 @@ module RiskalyzeRuby
   module Models
     class Account < Base
       attribute :id, Integer
-      attribute :porfolio_id, Integer
+      attribute :portfolio_id, Integer
       attribute :asset_manager_id, Integer
       attribute :custodian_id, Integer
       attribute :type_id, Integer
