@@ -18,8 +18,8 @@ module RiskalyzeRuby
       response = handle_response(HTTParty.post("#{@api_endpoint}/#{RiskalyzeRuby.config.token_path}", params))
 
       {
-        oauth_token: response[:access_token],
-        refresh_token: response[:refresh_token]
+        oauth_token: response['access_token'],
+        refresh_token: response['refresh_token']
       }
     end
   end
