@@ -15,6 +15,11 @@ module RiskalyzeRuby
         client = get "clients/#{client_id}"
         RiskalyzeRuby::Models::Client.new client, self
       end
+
+      def create_client(params)
+        client = RiskalyzeRuby::Models::Client.new params, self
+        client.save
+      end
     end
   end
 end

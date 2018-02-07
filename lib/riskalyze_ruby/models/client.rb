@@ -34,6 +34,8 @@ module RiskalyzeRuby
       attribute :permissions, Hash
       attribute :application_id, Integer
 
+      json_attributes :fname, :lname, :email, :phone
+
       def current_portfolio
         @client.portfolio(latest_current_portfolio)
       end
@@ -42,6 +44,16 @@ module RiskalyzeRuby
         @client.portfolio(latest_proposed_portfolio)
       end
 
+      def save
+        if @id
+          response = @client.put "clients/#{@id}", {body: json_params}
+        else
+          response = @client.post "clients", {body: json_params}
+        end
+
+        self.class.new(response)
+      end
     end
+
   end
 end
