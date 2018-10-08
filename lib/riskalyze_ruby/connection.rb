@@ -46,7 +46,7 @@ module RiskalyzeRuby
         end
       end
 
-      if response.parsed_response['error']
+      if response.parsed_response.is_a?(Hash) && response.parsed_response['error']
         raise APIError.new(response.parsed_response['error_description'])
       end
 
